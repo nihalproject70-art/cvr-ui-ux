@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVR Handicrafts | Home - Premium Handcrafted Luxury Wooden Art</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover exquisite handcrafted luxury wooden sculptures, traditional masks, premium home decor, and bespoke wood carvings at CVR Handicrafts. 100% authentic artisan quality.">
+    <meta name="keywords" content="cvr handicrafts, wooden sculptures, luxury handicrafts, traditional wooden masks, artisan wood decor, custom woodwork, premium wall art, hand-carved gifts">
+    <meta name="author" content="CVR Handicrafts">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+       1. STICKY HEADER & MOBILE NAVIGATION
+       ========================================== -->
+    <header class="header-wrapper" id="mainHeader">
+        <div class="container header-container">
+            <!-- Brand Logo -->
+            <div class="logo">
+                <a href="index.html" aria-label="CVR Handicrafts Logo">
+                    <span class="logo-main">CVR</span>
+                    <span class="logo-sub">Handicrafts</span>
+                </a>
+            </div>
+
+            <!-- Main Navigation Links (Desktop) -->
+            <nav class="nav-menu" role="navigation" aria-label="Desktop Navigation">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Actions Panel (Search, Cart, Menu) -->
+            <div class="header-actions">
+                <!-- Search Button Toggle -->
+                <button class="action-icon-btn" id="searchOpenBtn" aria-label="Open Search Searchbar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                
+                <!-- Shopping Cart Toggle -->
+                <button class="action-icon-btn" id="cartOpenBtn" aria-label="Open Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count-badge" id="cartCountBadge">0</span>
+                </button>
+                
+                <!-- Mobile Navigation Hamburger -->
+                <button class="hamburger-btn" id="mobileMenuToggle" aria-expanded="false" aria-label="Toggle Mobile Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Panel -->
+        <div class="mobile-nav-panel" id="mobileNavPanel" aria-label="Mobile Navigation Drawer">
+            <nav class="mobile-menu">
+                <a href="index.html" class="nav-link active" onclick="toggleMobileNav()">Home</a>
+                <a href="categories.html" class="nav-link" onclick="toggleMobileNav()">Categories</a>
+                <a href="shop.html" class="nav-link" onclick="toggleMobileNav()">Shop</a>
+                <a href="about.html" class="nav-link" onclick="toggleMobileNav()">About</a>
+                <a href="contact.html" class="nav-link" onclick="toggleMobileNav()">Contact</a>
+            </nav>
+            <div class="mobile-nav-footer">
+                <a href="tel:+918807173498"><i class="fa-solid fa-phone"></i> +91 88071 73498</a>
+                <a href="mailto:info@cvrhandicrafts.com"><i class="fa-solid fa-envelope"></i> info@cvrhandicrafts.com</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+       2. HERO SECTION
+       ========================================== -->
+    <section class="hero-section" id="home">
+        <div class="hero-background">
+            <img src="assets/hero_bg.png" alt="Luxurious Handicraft Showroom Showcase" fetchpriority="high">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tagline">Legacy of Craftsmanship</span>
+                <h1>CVR HANDICRAFTS</h1>
+                <p class="hero-subheading">Elevate your living spaces with authentic, high-end wood carvings, traditional masks, and premium sculptures crafted by master artisans. Bringing heritage wood craftsmanship to modern luxury.</p>
+                <div class="hero-actions">
+                    <a href="shop.html" class="btn btn-gold">Shop Now</a>
+                    <a href="about.html" class="btn btn-outline">Explore Story</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Smooth Scroll Mouse Indicator -->
+        <a href="#best-sellers" class="scroll-indicator" aria-label="Scroll down to best sellers">
+            <span>Discover More</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </a>
+    </section>
+
+    <!-- ==========================================
+       3. BEST SELLER SECTION (CAROUSEL)
+       ========================================== -->
+    <section class="section-padding reveal-element" id="best-sellers" style="background-color: var(--color-cream);">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="italic-sub">The Artisan Icons</span>
+                <h2>Best Seller Masterpieces</h2>
+                <p>Our most celebrated works, renowned for their intricate chiseled structures and flawless traditional polishing finishes.</p>
+            </div>
+
+            <div class="bestseller-carousel-wrapper">
+                <!-- Navigation Arrows -->
+                <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn carousel-btn-next" id="carouselNext" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+                
+                <div class="bestseller-carousel-container" id="carouselContainer">
+                    
+                    <!-- Best Seller 1 -->
+                    <div class="product-card">
+                        <span class="product-badge product-badge-bestseller">Best Seller</span>
+                        <div class="product-card-image">
+                            <img src="assets/cat_sculptures.png" alt="Teakwood Elephant Statue" loading="lazy">
+                            <div class="product-actions-overlay">
+                                <button class="product-action-btn quick-view-trigger" 
+                                        data-id="sculp-1"
+                                        data-name="Teakwood Elephant Statue" 
+                                        data-price="245.00" 
+                                        data-image="assets/cat_sculptures.png" 
+                                        data-wood="Premium Teakwood"
+                                        data-artisan="Master Devappa Acharya"
+                                        data-description="An incredibly detailed sculpture of an imperial elephant carved from a single block of premium aged teakwood. Features ornate traditional saddle reliefs, fine trunk folds, and polished gold mahogany finish."
+                                        aria-label="Quick view Teakwood Elephant Statue"><i class="fa-regular fa-eye"></i></button>
+                                <button class="product-action-btn add-to-cart-btn" 
+                                        data-id="sculp-1" 
+                                        data-name="Teakwood Elephant Statue" 
+                                        data-price="245.00" 
+                                        data-image="assets/cat_sculptures.png"
+                                        aria-label="Add Teakwood Elephant Statue to cart"><i class="fa-solid fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-meta">Teakwood • 12 Inches</span>
+                            <h4 class="product-title">Teakwood Elephant Statue</h4>
+                            <span class="product-price">$245.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Best Seller 2 -->
+                    <div class="product-card">
+                        <span class="product-badge product-badge-bestseller">Best Seller</span>
+                        <div class="product-card-image">
+                            <img src="assets/cat_wall_art.png" alt="Ornate Teak Tree of Life Carving" loading="lazy" style="filter: sepia(0.2) contrast(1.15);">
+                            <div class="product-actions-overlay">
+                                <button class="product-action-btn quick-view-trigger" 
+                                        data-id="wall-2"
+                                        data-name="Ornate Teak Tree of Life Carving" 
+                                        data-price="280.00" 
+                                        data-image="assets/cat_wall_art.png" 
+                                        data-wood="Burmese Teakwood"
+                                        data-artisan="Master Devappa Acharya"
+                                        data-description="Representing connection and balance, this masterwork captures intricate leaves and roots carved with depth layers from massive teak slab."
+                                        aria-label="Quick view Ornate Teak Tree of Life Carving"><i class="fa-regular fa-eye"></i></button>
+                                <button class="product-action-btn add-to-cart-btn" 
+                                        data-id="wall-2" 
+                                        data-name="Ornate Teak Tree of Life Carving" 
+                                        data-price="280.00" 
+                                        data-image="assets/cat_wall_art.png"
+                                        aria-label="Add Ornate Teak Tree of Life Carving to cart"><i class="fa-solid fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-meta">Teakwood • 30x30 Inches</span>
+                            <h4 class="product-title">Ornate Teak Tree of Life Carving</h4>
+                            <span class="product-price">$280.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Best Seller 3 -->
+                    <div class="product-card">
+                        <span class="product-badge product-badge-bestseller">Best Seller</span>
+                        <div class="product-card-image">
+                            <img src="assets/cat_decor.png" alt="Ornate Sandalwood Jewelry Chest" loading="lazy" style="filter: brightness(1.1) hue-rotate(15deg);">
+                            <div class="product-actions-overlay">
+                                <button class="product-action-btn quick-view-trigger" 
+                                        data-id="dec-3"
+                                        data-name="Ornate Sandalwood Jewelry Chest" 
+                                        data-price="150.00" 
+                                        data-image="assets/cat_decor.png" 
+                                        data-wood="East Indian Sandalwood"
+                                        data-artisan="Artisan Ramanujam G."
+                                        data-description="Exuding a mild natural fragrance, this beautiful chest features brass-pinned corners, velvet-lined drawers, and intricate lotus blossom engravings."
+                                        aria-label="Quick view Ornate Sandalwood Jewelry Chest"><i class="fa-regular fa-eye"></i></button>
+                                <button class="product-action-btn add-to-cart-btn" 
+                                        data-id="dec-3" 
+                                        data-name="Ornate Sandalwood Jewelry Chest" 
+                                        data-price="150.00" 
+                                        data-image="assets/cat_decor.png"
+                                        aria-label="Add Ornate Sandalwood Jewelry Chest to cart"><i class="fa-solid fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-meta">Sandalwood • Brass Inlay</span>
+                            <h4 class="product-title">Ornate Sandalwood Jewelry Chest</h4>
+                            <span class="product-price">$150.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Best Seller 4 -->
+                    <div class="product-card">
+                        <span class="product-badge product-badge-bestseller">Best Seller</span>
+                        <div class="product-card-image">
+                            <img src="assets/cat_masks.png" alt="Traditional Tribal Mask" loading="lazy">
+                            <div class="product-actions-overlay">
+                                <button class="product-action-btn quick-view-trigger" 
+                                        data-id="mask-1"
+                                        data-name="Traditional Oak Tribal Mask" 
+                                        data-price="110.00" 
+                                        data-image="assets/cat_masks.png" 
+                                        data-wood="Red Oak Wood"
+                                        data-artisan="Master Carver Balaji Naik"
+                                        data-description="Inspired by historic folklore art, this tribal mask is carefully hand-carved, utilizing organic natural pigments, offering a captivating rustic edge to modern walls."
+                                        aria-label="Quick view Traditional Oak Tribal Mask"><i class="fa-regular fa-eye"></i></button>
+                                <button class="product-action-btn add-to-cart-btn" 
+                                        data-id="mask-1" 
+                                        data-name="Traditional Oak Tribal Mask" 
+                                        data-price="110.00" 
+                                        data-image="assets/cat_masks.png"
+                                        aria-label="Add Traditional Oak Tribal Mask to cart"><i class="fa-solid fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-meta">Oak Wood • Rustic Finish</span>
+                            <h4 class="product-title">Traditional Oak Tribal Mask</h4>
+                            <span class="product-price">$110.00</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ==========================================
+       3. SHOP CATEGORIES SECTION
+       ========================================== -->
+    <section class="section-padding reveal-element" id="categories" style="background-color: var(--color-white);">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="italic-sub">Curated Selections</span>
+                <h2>Shop by Category</h2>
+                <p>Browse our extensive collection of masterfully hand-chiseled creations, sorted by individual design themes to suit your style.</p>
+            </div>
+
+            <div class="categories-grid">
+                <!-- Category 1: Wooden Sculptures -->
+                <div class="category-card">
+                    <div class="category-card-bg">
+                        <img src="assets/cat_sculptures.png" alt="Luxurious hand-carved wooden sculptures" loading="lazy">
+                    </div>
+                    <div class="category-card-overlay"></div>
+                    <div class="category-card-content">
+                        <h3>Wooden Sculptures</h3>
+                        <a href="shop.html#sculptures-section" class="btn-category">View Products <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Category 2: Wooden Masks -->
+                <div class="category-card">
+                    <div class="category-card-bg">
+                        <img src="assets/cat_masks.png" alt="Traditional carved wooden masks" loading="lazy">
+                    </div>
+                    <div class="category-card-overlay"></div>
+                    <div class="category-card-content">
+                        <h3>Wooden Masks</h3>
+                        <a href="shop.html#masks-section" class="btn-category">View Products <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Category 3: Home Decor -->
+                <div class="category-card">
+                    <div class="category-card-bg">
+                        <img src="assets/cat_decor.png" alt="Handcrafted wooden home decor items" loading="lazy">
+                    </div>
+                    <div class="category-card-overlay"></div>
+                    <div class="category-card-content">
+                        <h3>Home Decor</h3>
+                        <a href="shop.html#decor-section" class="btn-category">View Products <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Category 4: Wall Art -->
+                <div class="category-card">
+                    <div class="category-card-bg">
+                        <img src="assets/cat_wall_art.png" alt="Bespoke geometric wood carved wall art panels" loading="lazy">
+                    </div>
+                    <div class="category-card-overlay"></div>
+                    <div class="category-card-content">
+                        <h3>Wall Art</h3>
+                        <a href="shop.html#wallart-section" class="btn-category">View Products <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Category 5: Gift Items -->
+                <div class="category-card">
+                    <div class="category-card-bg">
+                        <img src="assets/cat_gift.png" alt="Premium handcrafted wood gifting items" loading="lazy">
+                    </div>
+                    <div class="category-card-overlay"></div>
+                    <div class="category-card-content">
+                        <h3>Gift Items</h3>
+                        <a href="shop.html#gifts-section" class="btn-category">View Products <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Category 6: Custom Handicrafts -->
+                <div class="category-card">
+                    <div class="category-card-bg">
+                        <img src="assets/cat_custom.png" alt="Artisan hand-carving custom designs in wood workshop" loading="lazy">
+                    </div>
+                    <div class="category-card-overlay"></div>
+                    <div class="category-card-content">
+                        <h3>Custom Handicrafts</h3>
+                        <a href="shop.html#custom-section" class="btn-category">View Products <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: var(--spacing-lg);">
+                <a href="shop.html" class="btn btn-primary">View Full Catalog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       4. WHY CHOOSE US
+       ========================================== -->
+    <section class="section-padding reveal-element" style="background-color: var(--color-cream);">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="italic-sub">Uncompromised Luxury</span>
+                <h2>Why Choose CVR</h2>
+                <p>We combine centuries-old artisan traditions with modern e-commerce security, providing a seamless luxury shopping experience.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1: Handmade -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-hands"></i></div>
+                    <h3>Handmade Products</h3>
+                    <p>100% manually hand-carved and hand-polished by lineage artisans. No computerized mass production.</p>
+                </div>
+
+                <!-- Feature 2: Premium Quality -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-gem"></i></div>
+                    <h3>Premium Quality</h3>
+                    <p>Crafted exclusively from top-grade seasoned hardwoods (Teak, Rosewood, Cedar) to resist warping and crack lines.</p>
+                </div>
+
+                <!-- Feature 3: Secure Payments -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Secure Payments</h3>
+                    <p>Encrypted checkouts integrated with international banking trust frameworks. Shop with peace of mind.</p>
+                </div>
+
+                <!-- Feature 4: Fast Delivery -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>Fast Delivery</h3>
+                    <p>Custom multi-layer shockproof luxury wooden boxing to guarantee your carvings arrive without single scratches.</p>
+                </div>
+
+                <!-- Feature 5: Custom Orders -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <h3>Custom Orders</h3>
+                    <p>Collaborate directly with our master woodworkers to create custom dimensions, name carvings, or historic murals.</p>
+                </div>
+
+                <!-- Feature 6: Customer Support -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-headset"></i></div>
+                    <h3>Customer Support</h3>
+                    <p>Dedicated personal art advisors to answer wood care questions or guide your tailored order shipments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       5. CUSTOMER REVIEWS (SLIDER)
+       ========================================== -->
+    <section class="section-padding reveal-element" style="background-color: var(--color-white);">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="italic-sub">Artisan Appreciations</span>
+                <h2>Voices of Our Patrons</h2>
+                <p>See how our premium wooden collectibles have transformed living rooms, lobbies, and workspaces across the globe.</p>
+            </div>
+
+            <div class="reviews-slider-wrapper">
+                <div class="reviews-slides-container" id="reviewsContainer">
+                    
+                    <!-- Slide 1 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="star-rating" aria-label="5 out of 5 stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <blockquote class="review-text">
+                                "The Teakwood Elephant Statue is a complete showstopper in our main foyer! The depth of the chiseling and the quality of the wood grains exceed everything we've bought online. Simply flawless craftsmanship."
+                            </blockquote>
+                            <div class="review-user-info">
+                                <span class="review-user-name">Elizabeth Vance</span>
+                                <span class="review-user-location">London, UK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="star-rating" aria-label="5 out of 5 stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <blockquote class="review-text">
+                                "Outstanding corporate gift pieces. We ordered a customized batch of 50 Mahogany desk organizers and name plaques for our annual executives meet. Every recipient was absolutely stunned by the rich finish."
+                            </blockquote>
+                            <div class="review-user-info">
+                                <span class="review-user-name">Rohan Malhotra</span>
+                                <span class="review-user-location">Mumbai, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="star-rating" aria-label="5 out of 5 stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <blockquote class="review-text">
+                                "The Traditional Oak Tribal Mask adds a gorgeous cultural focus to our dining room wall. I appreciate that CVR Handicrafts preserves traditional heritage woodcarving. Extremely fast, safe delivery!"
+                            </blockquote>
+                            <div class="review-user-info">
+                                <span class="review-user-name">Clara Dubois</span>
+                                <span class="review-user-location">Paris, France</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Slider Navigation Dots -->
+                <div class="slider-dots" id="reviewsDots">
+                    <button class="slider-dot active" aria-label="Go to review slide 1"></button>
+                    <button class="slider-dot" aria-label="Go to review slide 2"></button>
+                    <button class="slider-dot" aria-label="Go to review slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       6. FOOTER & NEWSLETTER
+       ========================================== -->
+    <footer class="footer-wrapper">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- About Col -->
+                <div class="footer-col footer-col-about">
+                    <h4 style="font-size: 1.4rem;">CVR Handicrafts</h4>
+                    <p style="margin-top: 15px;">Keeping the soul of heritage woodcarving alive. Creating spectacular handcrafted teak, rosewood, and mahogany masterpieces to anchor luxury homes.</p>
+                    <div class="footer-social-icons">
+                        <a href="https://facebook.com" class="social-icon-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" class="social-icon-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://pinterest.com" class="social-icon-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="https://youtube.com" class="social-icon-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Sitemap Col -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links-list" style="margin-top: 15px;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Shop Categories</a></li>
+                        <li><a href="shop.html">All Products</a></li>
+                        <li><a href="about.html">About Our Story</a></li>
+                        <li><a href="contact.html">Contact Concierge</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories Col -->
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul class="footer-links-list" style="margin-top: 15px;">
+                        <li><a href="shop.html#sculptures-section">Wooden Sculptures</a></li>
+                        <li><a href="shop.html#masks-section">Wooden Masks</a></li>
+                        <li><a href="shop.html#decor-section">Home Decor</a></li>
+                        <li><a href="shop.html#wallart-section">Wall Art Panels</a></li>
+                        <li><a href="shop.html#gifts-section">Luxury Gift Items</a></li>
+                        <li><a href="shop.html#custom-section">Bespoke Work</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Col -->
+                <div class="footer-col footer-col-newsletter">
+                    <h4>Newsletter</h4>
+                    <p style="margin-top: 15px;">Subscribe to receive previews of new artisan collections, wood care guides, and private showroom events.</p>
+                    <div class="form-status-message" id="newsletterFormStatus" style="padding: 6px; font-size: 0.8rem;"></div>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" placeholder="Your Email Address" aria-label="Newsletter email field" required>
+                        <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe to newsletter"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                    <span style="font-size: 0.75rem; opacity: 0.5;">No spam. Unsubscribe anytime.</span>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 CVR Handicrafts Private Limited. All Rights Reserved. Designed by Antigravity.</p>
+                <div class="payment-gateways" aria-label="Supported Secure Payments">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-stripe"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+       ACTIVE CART DRAWER (SLIDING PANEL)
+       ========================================== -->
+    <div class="cart-drawer-backdrop" id="cartDrawerBackdrop"></div>
+    <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Cart Drawer">
+        <div class="cart-drawer-header">
+            <h3>Shopping Bag</h3>
+            <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close Shopping Cart">&times;</button>
+        </div>
+        <div class="cart-items-container" id="cartItemsContainer">
+            <div class="cart-empty-message">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Your luxury shopping bag is currently empty.</p>
+                <a href="shop.html" class="btn btn-gold btn-sm">Explore Shop</a>
+            </div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-line">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-line">
+                <span>Safe shipping packaging:</span>
+                <span class="gold-text">Complimentary</span>
+            </div>
+            <div class="cart-summary-line cart-summary-line-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary cart-checkout-btn" id="checkoutBtn">Proceed To Checkout</button>
+        </div>
+    </div>
+
+    <!-- ==========================================
+       SEARCH OVERLAY MODAL
+       ========================================== -->
+    <div class="search-overlay-modal" id="searchOverlayModal" role="dialog" aria-modal="true" aria-label="Product Search Modal">
+        <button class="search-overlay-close" id="searchCloseBtn" aria-label="Close Search Overlay">&times;</button>
+        <div class="search-overlay-container">
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input-field" id="searchInputField" placeholder="Search the collections..." aria-label="Search field">
+                <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
+            </div>
+            <div>
+                <span class="search-results-label">Matching Products</span>
+                <div class="search-results-grid" id="searchResultsGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+       QUICK VIEW MODAL
+       ========================================== -->
+    <div class="quickview-backdrop" id="quickViewBackdrop">
+        <div class="quickview-modal" role="dialog" aria-modal="true" aria-label="Product Quick View Dialog">
+            <button class="quickview-close-btn" id="quickViewCloseBtn" aria-label="Close Quick View dialog">&times;</button>
+            <div class="quickview-grid">
+                <div class="quickview-image-panel">
+                    <img src="assets/cat_sculptures.png" id="qvProductImage" alt="Product Quick View Preview">
+                </div>
+                <div class="quickview-info-panel">
+                    <span class="quickview-meta" id="qvProductWood">Premium Teakwood</span>
+                    <h3 class="quickview-title" id="qvProductTitle">Teakwood Elephant Statue</h3>
+                    <div class="quickview-price" id="qvProductPrice">$245.00</div>
+                    <p class="quickview-desc" id="qvProductDescription">An incredibly detailed sculpture of an imperial elephant carved from a single block of premium aged teakwood. Features ornate traditional saddle reliefs, fine trunk folds, and polished gold mahogany finish.</p>
+                    <div class="quickview-details-meta">
+                        <span><strong>Carver Artisan:</strong> <span id="qvProductArtisan">Master Devappa Acharya</span></span>
+                        <span><strong>Packaging:</strong> Custom Multi-layer Shockproof Box</span>
+                        <span><strong>Shipping Guarantee:</strong> 100% Transit Safe Insured</span>
+                    </div>
+                    <div class="quickview-add-action">
+                        <div class="quickview-qty-select">
+                            <button class="quickview-qty-btn" id="qvQtyDec" aria-label="Decrease quantity">-</button>
+                            <span class="quickview-qty-val" id="qvQtyVal">1</span>
+                            <button class="quickview-qty-btn" id="qvQtyInc" aria-label="Increase quantity">+</button>
+                        </div>
+                        <button class="btn btn-primary" id="qvAddToCartBtn">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Script -->
+    <script src="script.js"></script>
+</body>
+</html>

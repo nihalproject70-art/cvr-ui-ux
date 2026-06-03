@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVR Handicrafts | About - Our Heritage & Artistry</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover exquisite handcrafted luxury wooden sculptures, traditional masks, premium home decor, and bespoke wood carvings at CVR Handicrafts. 100% authentic artisan quality.">
+    <meta name="keywords" content="cvr handicrafts, wooden sculptures, luxury handicrafts, traditional wooden masks, artisan wood decor, custom woodwork, premium wall art, hand-carved gifts">
+    <meta name="author" content="CVR Handicrafts">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+       1. STICKY HEADER & MOBILE NAVIGATION
+       ========================================== -->
+    <header class="header-wrapper" id="mainHeader">
+        <div class="container header-container">
+            <!-- Brand Logo -->
+            <div class="logo">
+                <a href="index.html" aria-label="CVR Handicrafts Logo">
+                    <span class="logo-main">CVR</span>
+                    <span class="logo-sub">Handicrafts</span>
+                </a>
+            </div>
+
+            <!-- Main Navigation Links (Desktop) -->
+            <nav class="nav-menu" role="navigation" aria-label="Desktop Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Actions Panel (Search, Cart, Menu) -->
+            <div class="header-actions">
+                <!-- Search Button Toggle -->
+                <button class="action-icon-btn" id="searchOpenBtn" aria-label="Open Search Searchbar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                
+                <!-- Shopping Cart Toggle -->
+                <button class="action-icon-btn" id="cartOpenBtn" aria-label="Open Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count-badge" id="cartCountBadge">0</span>
+                </button>
+                
+                <!-- Mobile Navigation Hamburger -->
+                <button class="hamburger-btn" id="mobileMenuToggle" aria-expanded="false" aria-label="Toggle Mobile Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Panel -->
+        <div class="mobile-nav-panel" id="mobileNavPanel" aria-label="Mobile Navigation Drawer">
+            <nav class="mobile-menu">
+                <a href="index.html" class="nav-link" onclick="toggleMobileNav()">Home</a>
+                <a href="categories.html" class="nav-link" onclick="toggleMobileNav()">Categories</a>
+                <a href="shop.html" class="nav-link" onclick="toggleMobileNav()">Shop</a>
+                <a href="about.html" class="nav-link active" onclick="toggleMobileNav()">About</a>
+                <a href="contact.html" class="nav-link" onclick="toggleMobileNav()">Contact</a>
+            </nav>
+            <div class="mobile-nav-footer">
+                <a href="tel:+918807173498"><i class="fa-solid fa-phone"></i> +91 88071 73498</a>
+                <a href="mailto:info@cvrhandicrafts.com"><i class="fa-solid fa-envelope"></i> info@cvrhandicrafts.com</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Spacer for sticky header padding -->
+    <div style="height: var(--header-height);"></div>
+
+    <!-- ==========================================
+       10. ABOUT US SECTION
+       ========================================== -->
+    <section class="section-padding" id="about" style="background-color: var(--color-white);">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Left: Collage -->
+                <div class="about-image-wrapper">
+                    <div class="about-image-frame">
+                        <img src="assets/cat_custom.png" alt="CVR Handicrafts Master Artisan Workshop Carver" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="about-content">
+                    <span class="italic-sub">The Soul of the Wood</span>
+                    <h2>Our Heritage & Journey</h2>
+                    <p>At CVR Handicrafts, our story is etched directly in wood. Founded as a small family woodshop three decades ago, we have committed ourselves to preserving traditional Indian chiseled handicrafts for global modern homes.</p>
+                    <p>We source only high-density, ethically harvested logs of teakwood, mahogany, rosewood, and cedar. Every fine line and organic curve is sculpted manually, utilizing traditional heritage chisels, ensuring no two creations are ever fully identical. Our mission is to keep this spectacular, ancient art alive, honoring the dedicated woodcarvers who pour their soul into every creation.</p>
+                    
+                    <div class="about-metrics">
+                        <div class="metric-item">
+                            <span class="metric-num">30+</span>
+                            <span class="metric-lbl">Years Heritage</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-num">15+</span>
+                            <span class="metric-lbl">Master Artisans</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-num">10k+</span>
+                            <span class="metric-lbl">Homes Adorned</span>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">Connect With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       6. FOOTER
+       ========================================== -->
+    <footer class="footer-wrapper">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- About Col -->
+                <div class="footer-col footer-col-about">
+                    <h4 style="font-size: 1.4rem;">CVR Handicrafts</h4>
+                    <p style="margin-top: 15px;">Keeping the soul of heritage woodcarving alive. Creating spectacular handcrafted teak, rosewood, and mahogany masterpieces to anchor luxury homes.</p>
+                    <div class="footer-social-icons">
+                        <a href="https://facebook.com" class="social-icon-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" class="social-icon-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://pinterest.com" class="social-icon-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="https://youtube.com" class="social-icon-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Sitemap Col -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links-list" style="margin-top: 15px;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Shop Categories</a></li>
+                        <li><a href="shop.html">All Products</a></li>
+                        <li><a href="about.html">About Our Story</a></li>
+                        <li><a href="contact.html">Contact Concierge</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories Col -->
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul class="footer-links-list" style="margin-top: 15px;">
+                        <li><a href="shop.html#sculptures-section">Wooden Sculptures</a></li>
+                        <li><a href="shop.html#masks-section">Wooden Masks</a></li>
+                        <li><a href="shop.html#decor-section">Home Decor</a></li>
+                        <li><a href="shop.html#wallart-section">Wall Art Panels</a></li>
+                        <li><a href="shop.html#gifts-section">Luxury Gift Items</a></li>
+                        <li><a href="shop.html#custom-section">Bespoke Work</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Col -->
+                <div class="footer-col footer-col-newsletter">
+                    <h4>Newsletter</h4>
+                    <p style="margin-top: 15px;">Subscribe to receive previews of new artisan collections, wood care guides, and private showroom events.</p>
+                    <div class="form-status-message" id="newsletterFormStatus" style="padding: 6px; font-size: 0.8rem;"></div>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" placeholder="Your Email Address" aria-label="Newsletter email field" required>
+                        <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe to newsletter"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                    <span style="font-size: 0.75rem; opacity: 0.5;">No spam. Unsubscribe anytime.</span>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 CVR Handicrafts Private Limited. All Rights Reserved. Designed by Antigravity.</p>
+                <div class="payment-gateways" aria-label="Supported Secure Payments">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-stripe"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+       ACTIVE CART DRAWER (SLIDING PANEL)
+       ========================================== -->
+    <div class="cart-drawer-backdrop" id="cartDrawerBackdrop"></div>
+    <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Cart Drawer">
+        <div class="cart-drawer-header">
+            <h3>Shopping Bag</h3>
+            <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close Shopping Cart">&times;</button>
+        </div>
+        <div class="cart-items-container" id="cartItemsContainer">
+            <div class="cart-empty-message">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Your luxury shopping bag is currently empty.</p>
+                <a href="shop.html" class="btn btn-gold btn-sm">Explore Shop</a>
+            </div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-line">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-line">
+                <span>Safe shipping packaging:</span>
+                <span class="gold-text">Complimentary</span>
+            </div>
+            <div class="cart-summary-line cart-summary-line-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary cart-checkout-btn" id="checkoutBtn">Proceed To Checkout</button>
+        </div>
+    </div>
+
+    <!-- ==========================================
+       SEARCH OVERLAY MODAL
+       ========================================== -->
+    <div class="search-overlay-modal" id="searchOverlayModal" role="dialog" aria-modal="true" aria-label="Product Search Modal">
+        <button class="search-overlay-close" id="searchCloseBtn" aria-label="Close Search Overlay">&times;</button>
+        <div class="search-overlay-container">
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input-field" id="searchInputField" placeholder="Search the collections..." aria-label="Search field">
+                <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
+            </div>
+            <div>
+                <span class="search-results-label">Matching Products</span>
+                <div class="search-results-grid" id="searchResultsGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+       QUICK VIEW MODAL
+       ========================================== -->
+    <div class="quickview-backdrop" id="quickViewBackdrop">
+        <div class="quickview-modal" role="dialog" aria-modal="true" aria-label="Product Quick View Dialog">
+            <button class="quickview-close-btn" id="quickViewCloseBtn" aria-label="Close Quick View dialog">&times;</button>
+            <div class="quickview-grid">
+                <div class="quickview-image-panel">
+                    <img src="assets/cat_sculptures.png" id="qvProductImage" alt="Product Quick View Preview">
+                </div>
+                <div class="quickview-info-panel">
+                    <span class="quickview-meta" id="qvProductWood">Premium Teakwood</span>
+                    <h3 class="quickview-title" id="qvProductTitle">Teakwood Elephant Statue</h3>
+                    <div class="quickview-price" id="qvProductPrice">$245.00</div>
+                    <p class="quickview-desc" id="qvProductDescription">An incredibly detailed sculpture of an elephant...</p>
+                    <div class="quickview-details-meta">
+                        <span><strong>Carver Artisan:</strong> <span id="qvProductArtisan">Master Devappa Acharya</span></span>
+                        <span><strong>Packaging:</strong> Custom Multi-layer Shockproof Box</span>
+                        <span><strong>Shipping Guarantee:</strong> 100% Transit Safe Insured</span>
+                    </div>
+                    <div class="quickview-add-action">
+                        <div class="quickview-qty-select">
+                            <button class="quickview-qty-btn" id="qvQtyDec" aria-label="Decrease quantity">-</button>
+                            <span class="quickview-qty-val" id="qvQtyVal">1</span>
+                            <button class="quickview-qty-btn" id="qvQtyInc" aria-label="Increase quantity">+</button>
+                        </div>
+                        <button class="btn btn-primary" id="qvAddToCartBtn">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Script -->
+    <script src="script.js"></script>
+</body>
+</html>

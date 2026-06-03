@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVR Handicrafts | Shop - Artisan Hardwood Catalog</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover exquisite handcrafted luxury wooden sculptures, traditional masks, premium home decor, and bespoke wood carvings at CVR Handicrafts. 100% authentic artisan quality.">
+    <meta name="keywords" content="cvr handicrafts, wooden sculptures, luxury handicrafts, traditional wooden masks, artisan wood decor, custom woodwork, premium wall art, hand-carved gifts">
+    <meta name="author" content="CVR Handicrafts">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+       1. STICKY HEADER & MOBILE NAVIGATION
+       ========================================== -->
+    <header class="header-wrapper" id="mainHeader">
+        <div class="container header-container">
+            <!-- Brand Logo -->
+            <div class="logo">
+                <a href="index.html" aria-label="CVR Handicrafts Logo">
+                    <span class="logo-main">CVR</span>
+                    <span class="logo-sub">Handicrafts</span>
+                </a>
+            </div>
+
+            <!-- Main Navigation Links (Desktop) -->
+            <nav class="nav-menu" role="navigation" aria-label="Desktop Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="shop.html" class="nav-link active">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Actions Panel (Search, Cart, Menu) -->
+            <div class="header-actions">
+                <!-- Search Button Toggle -->
+                <button class="action-icon-btn" id="searchOpenBtn" aria-label="Open Search Searchbar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                
+                <!-- Shopping Cart Toggle -->
+                <button class="action-icon-btn" id="cartOpenBtn" aria-label="Open Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count-badge" id="cartCountBadge">0</span>
+                </button>
+                
+                <!-- Mobile Navigation Hamburger -->
+                <button class="hamburger-btn" id="mobileMenuToggle" aria-expanded="false" aria-label="Toggle Mobile Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Panel -->
+        <div class="mobile-nav-panel" id="mobileNavPanel" aria-label="Mobile Navigation Drawer">
+            <nav class="mobile-menu">
+                <a href="index.html" class="nav-link" onclick="toggleMobileNav()">Home</a>
+                <a href="categories.html" class="nav-link" onclick="toggleMobileNav()">Categories</a>
+                <a href="shop.html" class="nav-link active" onclick="toggleMobileNav()">Shop</a>
+                <a href="about.html" class="nav-link" onclick="toggleMobileNav()">About</a>
+                <a href="contact.html" class="nav-link" onclick="toggleMobileNav()">Contact</a>
+            </nav>
+            <div class="mobile-nav-footer">
+                <a href="tel:+918807173498"><i class="fa-solid fa-phone"></i> +91 88071 73498</a>
+                <a href="mailto:info@cvrhandicrafts.com"><i class="fa-solid fa-envelope"></i> info@cvrhandicrafts.com</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Spacer for sticky header padding -->
+    <div style="height: var(--header-height);"></div>
+
+    <!-- ==========================================
+       4. CATEGORY PRODUCT SECTIONS (SHOPPING MODULE)
+       ========================================== -->
+    <section class="section-padding" id="shop" style="background-color: var(--color-white);">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="italic-sub">Exquisite Collections</span>
+                <h2>Artisan Catalog</h2>
+                <p>Browse through our collections. Every single item represents weeks of intensive labor, historic chiseling techniques, and premium ethically-sourced wood.</p>
+            </div>
+
+            <div class="category-products-container">
+                
+                <!-- SECTION 4A: WOODEN SCULPTURES -->
+                <div class="product-category-group" id="sculptures-section">
+                    <div class="section-header">
+                        <span class="italic-sub">Heritage in Form</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--color-dark); margin-bottom: var(--spacing-sm);">Wooden Sculptures</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <span class="product-badge product-badge-bestseller">Best Seller</span>
+                            <div class="product-card-image">
+                                <img src="assets/cat_sculptures.png" alt="Teakwood Elephant Statue" loading="lazy">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="sculp-1"
+                                            data-name="Teakwood Elephant Statue" 
+                                            data-price="245.00" 
+                                            data-image="assets/cat_sculptures.png" 
+                                            data-wood="Premium Teakwood"
+                                            data-artisan="Master Devappa Acharya"
+                                            data-description="An incredibly detailed sculpture of an imperial elephant carved from a single block of premium aged teakwood. Features ornate traditional saddle reliefs, fine trunk folds, and polished gold mahogany finish."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="sculp-1" 
+                                            data-name="Teakwood Elephant Statue" 
+                                            data-price="245.00" 
+                                            data-image="assets/cat_sculptures.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Teakwood • 12 Inches</span>
+                                <h4 class="product-title">Teakwood Elephant Statue</h4>
+                                <span class="product-price">$245.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="sculp-1" data-name="Teakwood Elephant Statue" data-price="245.00" data-image="assets/cat_sculptures.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_sculptures.png" alt="Rosewood Buddha Sculpture" loading="lazy" style="filter: hue-rotate(20deg) contrast(1.1);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="sculp-2"
+                                            data-name="Rosewood Meditating Buddha" 
+                                            data-price="320.00" 
+                                            data-image="assets/cat_sculptures.png" 
+                                            data-wood="Indian Rosewood (Sissoo)"
+                                            data-artisan="Artisan Ramanujam G."
+                                            data-description="Carved from dark deep rosewood, this serene meditating Buddha features flawless polishing, showcasing the exquisite natural wood grains. A perfect masterpiece for calm home decor."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="sculp-2" 
+                                            data-name="Rosewood Meditating Buddha" 
+                                            data-price="320.00" 
+                                            data-image="assets/cat_sculptures.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Rosewood • 15 Inches</span>
+                                <h4 class="product-title">Rosewood Meditating Buddha</h4>
+                                <span class="product-price">$320.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="sculp-2" data-name="Rosewood Meditating Buddha" data-price="320.00" data-image="assets/cat_sculptures.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="product-badge product-badge-artisan">Artisan Pick</span>
+                            <div class="product-card-image">
+                                <img src="assets/cat_sculptures.png" alt="Mahogany Ganesha Sculpture" loading="lazy" style="filter: sepia(0.3) saturate(1.2);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="sculp-3"
+                                            data-name="Mahogany Dancing Ganesha" 
+                                            data-price="450.00" 
+                                            data-image="assets/cat_sculptures.png" 
+                                            data-wood="Honduran Mahogany"
+                                            data-artisan="Master Devappa Acharya"
+                                            data-description="A vibrant, multi-layered dancing Ganesha carving. Each hand holds symbolic attributes etched with dynamic precision. Finished with a luxury gold wax varnish."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="sculp-3" 
+                                            data-name="Mahogany Dancing Ganesha" 
+                                            data-price="450.00" 
+                                            data-image="assets/cat_sculptures.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Mahogany • 18 Inches</span>
+                                <h4 class="product-title">Mahogany Dancing Ganesha</h4>
+                                <span class="product-price">$450.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="sculp-3" data-name="Mahogany Dancing Ganesha" data-price="450.00" data-image="assets/cat_sculptures.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_sculptures.png" alt="Oak Peacock Statue" loading="lazy" style="filter: brightness(0.9) contrast(1.2);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="sculp-4"
+                                            data-name="Vintage Oak Graceful Peacock" 
+                                            data-price="185.00" 
+                                            data-image="assets/cat_sculptures.png" 
+                                            data-wood="Aged Oak Wood"
+                                            data-artisan="Artisan K. Somasekhar"
+                                            data-description="Features a graceful peacock displaying detailed feather cutouts, showcasing the high-texture rings of premium chiseled white oak. Coated with organic wax."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="sculp-4" 
+                                            data-name="Vintage Oak Graceful Peacock" 
+                                            data-price="185.00" 
+                                            data-image="assets/cat_sculptures.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Oak Wood • 11 Inches</span>
+                                <h4 class="product-title">Vintage Oak Graceful Peacock</h4>
+                                <span class="product-price">$185.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="sculp-4" data-name="Vintage Oak Graceful Peacock" data-price="185.00" data-image="assets/cat_sculptures.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 4B: WOODEN MASKS -->
+                <div class="product-category-group" id="masks-section">
+                    <div class="section-header">
+                        <span class="italic-sub">Ancestral Heritage</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--color-dark); margin-bottom: var(--spacing-sm);">Wooden Masks</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <span class="product-badge product-badge-bestseller">Popular</span>
+                            <div class="product-card-image">
+                                <img src="assets/cat_masks.png" alt="Traditional Tribal Mask" loading="lazy">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="mask-1"
+                                            data-name="Traditional Oak Tribal Mask" 
+                                            data-price="110.00" 
+                                            data-image="assets/cat_masks.png" 
+                                            data-wood="Red Oak Wood"
+                                            data-artisan="Master Carver Balaji Naik"
+                                            data-description="Inspired by historic folklore art, this tribal mask is carefully hand-carved, utilizing organic natural pigments, offering a captivating rustic edge to modern walls."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="mask-1" 
+                                            data-name="Traditional Oak Tribal Mask" 
+                                            data-price="110.00" 
+                                            data-image="assets/cat_masks.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Oak Wood • Rustic Finish</span>
+                                <h4 class="product-title">Traditional Oak Tribal Mask</h4>
+                                <span class="product-price">$110.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="mask-1" data-name="Traditional Oak Tribal Mask" data-price="110.00" data-image="assets/cat_masks.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_masks.png" alt="Antique Teak Guardian Mask" loading="lazy" style="filter: brightness(0.9) sepia(0.2);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="mask-2"
+                                            data-name="Antique Teak Guardian Mask" 
+                                            data-price="135.00" 
+                                            data-image="assets/cat_masks.png" 
+                                            data-wood="Reclaimed Teakwood"
+                                            data-artisan="Master Carver Balaji Naik"
+                                            data-description="An ornate protective guardian mask displaying highly fine detailing on the eyebrows and crown, carved from tough old teak boards. Polished to a dark mahogany gleam."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="mask-2" 
+                                            data-name="Antique Teak Guardian Mask" 
+                                            data-price="135.00" 
+                                            data-image="assets/cat_masks.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Teakwood • Antique Finish</span>
+                                <h4 class="product-title">Antique Teak Guardian Mask</h4>
+                                <span class="product-price">$135.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="mask-2" data-name="Antique Teak Guardian Mask" data-price="135.00" data-image="assets/cat_masks.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_masks.png" alt="Golden Sun & Moon Mask" loading="lazy" style="filter: saturate(1.4) hue-rotate(-10deg);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="mask-3"
+                                            data-name="Golden Accents Sun & Moon Mask" 
+                                            data-price="160.00" 
+                                            data-image="assets/cat_masks.png" 
+                                            data-wood="Polished Jackwood"
+                                            data-artisan="Artisan Ramanujam G."
+                                            data-description="This stunning mask features intricate gold-leafing along chiseled celestial accents. Hand carved from local jackwood, featuring warm golden wood-grains."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="mask-3" 
+                                            data-name="Golden Accents Sun & Moon Mask" 
+                                            data-price="160.00" 
+                                            data-image="assets/cat_masks.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Jackwood • Gold Accent</span>
+                                <h4 class="product-title">Golden Accents Sun & Moon Mask</h4>
+                                <span class="product-price">$160.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="mask-3" data-name="Golden Accents Sun & Moon Mask" data-price="160.00" data-image="assets/cat_masks.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_masks.png" alt="Ancestral Cedar Mask" loading="lazy" style="filter: contrast(0.9) brightness(1.15);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="mask-4"
+                                            data-name="Rustic Cedar Ancestral Mask" 
+                                            data-price="95.00" 
+                                            data-image="assets/cat_masks.png" 
+                                            data-wood="Aromatic Cedar"
+                                            data-artisan="Artisan K. Somasekhar"
+                                            data-description="Exhibiting primitive raw-cut design aesthetics, this fragrant red cedar mask highlights natural knotholes and authentic chisel scoring marks."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="mask-4" 
+                                            data-name="Rustic Cedar Ancestral Mask" 
+                                            data-price="95.00" 
+                                            data-image="assets/cat_masks.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Cedarwood • Natural Wax</span>
+                                <h4 class="product-title">Rustic Cedar Ancestral Mask</h4>
+                                <span class="product-price">$95.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="mask-4" data-name="Rustic Cedar Ancestral Mask" data-price="95.00" data-image="assets/cat_masks.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 4C: HOME DECOR -->
+                <div class="product-category-group" id="decor-section">
+                    <div class="section-header">
+                        <span class="italic-sub">Artistry in Living</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--color-dark); margin-bottom: var(--spacing-sm);">Home Decor</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_decor.png" alt="Teakwood Flower Vase" loading="lazy">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="dec-1"
+                                            data-name="Artisan Teakwood Flower Vase" 
+                                            data-price="85.00" 
+                                            data-image="assets/cat_decor.png" 
+                                            data-wood="Burmese Teakwood"
+                                            data-artisan="Master Devappa Acharya"
+                                            data-description="A beautiful organic-shaped teak vase featuring striking golden-brown wood grains, chiseled spiral contours, and a waterproof internal lacquer lining."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="dec-1" 
+                                            data-name="Artisan Teakwood Flower Vase" 
+                                            data-price="85.00" 
+                                            data-image="assets/cat_decor.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Teakwood • 14 Inches</span>
+                                <h4 class="product-title">Artisan Teakwood Flower Vase</h4>
+                                <span class="product-price">$85.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="dec-1" data-name="Artisan Teakwood Flower Vase" data-price="85.00" data-image="assets/cat_decor.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_decor.png" alt="Cedar Candle Holders" loading="lazy" style="filter: sepia(0.2) brightness(0.95);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="dec-2"
+                                            data-name="Cedarwood Candle Holders (Set of 3)" 
+                                            data-price="65.00" 
+                                            data-image="assets/cat_decor.png" 
+                                            data-wood="Red Cedarwood"
+                                            data-artisan="Artisan K. Somasekhar"
+                                            data-description="A set of three tiered candle pillars carved from solid cedar. Each features a brass candle plate inlay and deep hand-brushed rustic textures."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="dec-2" 
+                                            data-name="Cedarwood Candle Holders (Set of 3)" 
+                                            data-price="65.00" 
+                                            data-image="assets/cat_decor.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Cedarwood • Set of 3</span>
+                                <h4 class="product-title">Cedarwood Candle Holders (Set of 3)</h4>
+                                <span class="product-price">$65.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="dec-2" data-name="Cedarwood Candle Holders (Set of 3)" data-price="65.00" data-image="assets/cat_decor.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="product-badge product-badge-bestseller">Best Seller</span>
+                            <div class="product-card-image">
+                                <img src="assets/cat_decor.png" alt="Sandalwood Jewelry Chest" loading="lazy" style="filter: brightness(1.1) hue-rotate(15deg);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="dec-3"
+                                            data-name="Ornate Sandalwood Jewelry Chest" 
+                                            data-price="150.00" 
+                                            data-image="assets/cat_decor.png" 
+                                            data-wood="East Indian Sandalwood"
+                                            data-artisan="Artisan Ramanujam G."
+                                            data-description="Exuding a mild natural fragrance, this beautiful chest features brass-pinned corners, velvet-lined drawers, and intricate lotus blossom engravings."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="dec-3" 
+                                            data-name="Ornate Sandalwood Jewelry Chest" 
+                                            data-price="150.00" 
+                                            data-image="assets/cat_decor.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Sandalwood • Brass Inlay</span>
+                                <h4 class="product-title">Ornate Sandalwood Jewelry Chest</h4>
+                                <span class="product-price">$150.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="dec-3" data-name="Ornate Sandalwood Jewelry Chest" data-price="150.00" data-image="assets/cat_decor.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_decor.png" alt="Polished Walnut Bowl" loading="lazy" style="filter: hue-rotate(-20deg) contrast(1.15);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="dec-4"
+                                            data-name="Polished Walnut Bowl" 
+                                            data-price="45.00" 
+                                            data-image="assets/cat_decor.png" 
+                                            data-wood="Black Walnut Wood"
+                                            data-artisan="Master Carver Balaji Naik"
+                                            data-description="A minimalist, sleek hand-lathed decorative bowl made from premium American walnut. Features deep espresso rings and satin beeswax seal."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="dec-4" 
+                                            data-name="Polished Walnut Bowl" 
+                                            data-price="45.00" 
+                                            data-image="assets/cat_decor.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Walnut Wood • 10 Inches</span>
+                                <h4 class="product-title">Polished Walnut Bowl</h4>
+                                <span class="product-price">$45.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="dec-4" data-name="Polished Walnut Bowl" data-price="45.00" data-image="assets/cat_decor.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 4D: WALL ART -->
+                <div class="product-category-group" id="wallart-section">
+                    <div class="section-header">
+                        <span class="italic-sub">Rustic Elevations</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--color-dark); margin-bottom: var(--spacing-sm);">Wall Art Panels</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_wall_art.png" alt="Geometric Wall Panel" loading="lazy">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="wall-1"
+                                            data-name="Geometric Cedarwood Wall Panel" 
+                                            data-price="190.00" 
+                                            data-image="assets/cat_wall_art.png" 
+                                            data-wood="Red Cedarwood"
+                                            data-artisan="Artisan K. Somasekhar"
+                                            data-description="A sophisticated modern cedar wall relief, featuring interlocking chiseled geometric forms and a multi-tone brown organic dye."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="wall-1" 
+                                            data-name="Geometric Cedarwood Wall Panel" 
+                                            data-price="190.00" 
+                                            data-image="assets/cat_wall_art.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Cedarwood • 24x24 Inches</span>
+                                <h4 class="product-title">Geometric Cedarwood Wall Panel</h4>
+                                <span class="product-price">$190.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="wall-1" data-name="Geometric Cedarwood Wall Panel" data-price="190.00" data-image="assets/cat_wall_art.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="product-badge product-badge-bestseller">Best Seller</span>
+                            <div class="product-card-image">
+                                <img src="assets/cat_wall_art.png" alt="Tree of Life Panel" loading="lazy" style="filter: sepia(0.2) contrast(1.15);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="wall-2"
+                                            data-name="Ornate Teak Tree of Life Carving" 
+                                            data-price="280.00" 
+                                            data-image="assets/cat_wall_art.png" 
+                                            data-wood="Burmese Teakwood"
+                                            data-artisan="Master Devappa Acharya"
+                                            data-description="Representing connection and balance, this masterwork captures intricate leaves and roots carved with depth layers from massive teak slab."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="wall-2" 
+                                            data-name="Ornate Teak Tree of Life Carving" 
+                                            data-price="280.00" 
+                                            data-image="assets/cat_wall_art.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Teakwood • 30x30 Inches</span>
+                                <h4 class="product-title">Ornate Teak Tree of Life Carving</h4>
+                                <span class="product-price">$280.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="wall-2" data-name="Ornate Teak Tree of Life Carving" data-price="280.00" data-image="assets/cat_wall_art.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_wall_art.png" alt="Forest Relief Panel" loading="lazy" style="filter: brightness(0.9) sepia(0.3);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="wall-3"
+                                            data-name="Hand-chiseled Walnut Forest Relief" 
+                                            data-price="340.00" 
+                                            data-image="assets/cat_wall_art.png" 
+                                            data-wood="Premium Walnut"
+                                            data-artisan="Master Carver Balaji Naik"
+                                            data-description="Featuring a majestic 3D relief of a dense forest canopy. The shadows dynamically shift under lighting, highlighting high-end wood artistry."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="wall-3" 
+                                            data-name="Hand-chiseled Walnut Forest Relief" 
+                                            data-price="340.00" 
+                                            data-image="assets/cat_wall_art.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Walnut Wood • 36x18 Inches</span>
+                                <h4 class="product-title">Hand-chiseled Walnut Forest Relief</h4>
+                                <span class="product-price">$340.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="wall-3" data-name="Hand-chiseled Walnut Forest Relief" data-price="340.00" data-image="assets/cat_wall_art.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_wall_art.png" alt="Sunburst Plaque" loading="lazy" style="filter: saturate(1.3) brightness(1.15);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="wall-4"
+                                            data-name="Gold Accented Pine Sunburst Plaque" 
+                                            data-price="165.00" 
+                                            data-image="assets/cat_wall_art.png" 
+                                            data-wood="Aged Pine Wood"
+                                            data-artisan="Artisan Ramanujam G."
+                                            data-description="Radiating chiseled pine rays tipped in elegant gold leaf paint. Bring warm solar rays and organic textures onto your entryway."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="wall-4" 
+                                            data-name="Gold Accented Pine Sunburst Plaque" 
+                                            data-price="165.00" 
+                                            data-image="assets/cat_wall_art.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Pine Wood • Gold Details</span>
+                                <h4 class="product-title">Gold Accented Pine Sunburst Plaque</h4>
+                                <span class="product-price">$165.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="wall-4" data-name="Gold Accented Pine Sunburst Plaque" data-price="165.00" data-image="assets/cat_wall_art.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 4E: GIFT ITEMS -->
+                <div class="product-category-group" id="gifts-section">
+                    <div class="section-header">
+                        <span class="italic-sub">Gifts of Heritage</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--color-dark); margin-bottom: var(--spacing-sm);">Gift Items</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <span class="product-badge product-badge-bestseller">Popular</span>
+                            <div class="product-card-image">
+                                <img src="assets/cat_gift.png" alt="Handcrafted Chess Set" loading="lazy">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="gift-1"
+                                            data-name="Handcrafted Oak Chess Set" 
+                                            data-price="180.00" 
+                                            data-image="assets/cat_gift.png" 
+                                            data-wood="Oak & Walnut Wood"
+                                            data-artisan="Master Devappa Acharya"
+                                            data-description="A gorgeous checkerboard chess set with custom chiseled pieces, built-in drawer compartments, and protective felt-lined bottoms."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="gift-1" 
+                                            data-name="Handcrafted Oak Chess Set" 
+                                            data-price="180.00" 
+                                            data-image="assets/cat_gift.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Oak & Walnut • 14x14 Inches</span>
+                                <h4 class="product-title">Handcrafted Oak Chess Set</h4>
+                                <span class="product-price">$180.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="gift-1" data-name="Handcrafted Oak Chess Set" data-price="180.00" data-image="assets/cat_gift.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_gift.png" alt="Teakwood Desk Organizer" loading="lazy" style="filter: sepia(0.2) contrast(1.15);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="gift-2"
+                                            data-name="Teakwood Desk Organizer" 
+                                            data-price="55.00" 
+                                            data-image="assets/cat_gift.png" 
+                                            data-wood="Premium Teak"
+                                            data-artisan="Artisan K. Somasekhar"
+                                            data-description="The ultimate luxury workspace upgrade. Contains three compartments, phone slot, cardholder slots, and smooth pen cavities."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="gift-2" 
+                                            data-name="Teakwood Desk Organizer" 
+                                            data-price="55.00" 
+                                            data-image="assets/cat_gift.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Teakwood • Modern Utility</span>
+                                <h4 class="product-title">Teakwood Desk Organizer</h4>
+                                <span class="product-price">$55.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="gift-2" data-name="Teakwood Desk Organizer" data-price="55.00" data-image="assets/cat_gift.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_gift.png" alt="Decorative Coaster Set" loading="lazy" style="filter: brightness(0.9) contrast(1.2);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="gift-3"
+                                            data-name="Mahogany Decorative Coaster Set" 
+                                            data-price="40.00" 
+                                            data-image="assets/cat_gift.png" 
+                                            data-wood="Honduran Mahogany"
+                                            data-artisan="Artisan Ramanujam G."
+                                            data-description="A set of 6 beautiful round mahogany coasters with elegant laser-etched traditional mandala designs and a premium mahogany display holder."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="gift-3" 
+                                            data-name="Mahogany Decorative Coaster Set" 
+                                            data-price="40.00" 
+                                            data-image="assets/cat_gift.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Mahogany • Set of 6</span>
+                                <h4 class="product-title">Mahogany Decorative Coaster Set</h4>
+                                <span class="product-price">$40.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="gift-3" data-name="Mahogany Decorative Coaster Set" data-price="40.00" data-image="assets/cat_gift.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_gift.png" alt="Potpourri Urn" loading="lazy" style="filter: saturate(1.3) hue-rotate(20deg);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="gift-4"
+                                            data-name="Cedarwood Potpourri Urn" 
+                                            data-price="30.00" 
+                                            data-image="assets/cat_gift.png" 
+                                            data-wood="Red Cedarwood"
+                                            data-artisan="Master Carver Balaji Naik"
+                                            data-description="A beautiful hollow cedar sphere featuring dynamic organic mesh cutouts to let aromatic fragrances filter seamlessly. Coated with organic glaze."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="gift-4" 
+                                            data-name="Cedarwood Potpourri Urn" 
+                                            data-price="30.00" 
+                                            data-image="assets/cat_gift.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Cedarwood • 6 Inch Sphere</span>
+                                <h4 class="product-title">Cedarwood Potpourri Urn</h4>
+                                <span class="product-price">$30.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="gift-4" data-name="Cedarwood Potpourri Urn" data-price="30.00" data-image="assets/cat_gift.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 4F: CUSTOM HANDICRAFTS -->
+                <div class="product-category-group" id="custom-section">
+                    <div class="section-header">
+                        <span class="italic-sub">Bespoke Creations</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--color-dark); margin-bottom: var(--spacing-sm);">Custom Handicrafts</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_custom.png" alt="Name Plaque" loading="lazy">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="cust-1"
+                                            data-name="Custom Name Carved Plaque" 
+                                            data-price="75.00" 
+                                            data-image="assets/cat_custom.png" 
+                                            data-wood="Burmese Teakwood"
+                                            data-artisan="Bespoke Design Team"
+                                            data-description="A beautiful personalized home entrance plaque. Custom deep-carved letters with decorative leafy borders, protected with exterior UV-block seal."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="cust-1" 
+                                            data-name="Custom Name Carved Plaque" 
+                                            data-price="75.00" 
+                                            data-image="assets/cat_custom.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Teakwood • Personalized</span>
+                                <h4 class="product-title">Custom Name Carved Plaque</h4>
+                                <span class="product-price">$75.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="cust-1" data-name="Custom Name Carved Plaque" data-price="75.00" data-image="assets/cat_custom.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_custom.png" alt="Walnut Dining Trivet" loading="lazy" style="filter: sepia(0.2) contrast(1.15);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="cust-2"
+                                            data-name="Bespoke Walnut Dining Trivet" 
+                                            data-price="90.00" 
+                                            data-image="assets/cat_custom.png" 
+                                            data-wood="Premium Black Walnut"
+                                            data-artisan="Bespoke Design Team"
+                                            data-description="Personalized with custom monograms or quotes. Ideal for luxury table protection, carved with custom channels to insulate thermal heat."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="cust-2" 
+                                            data-name="Bespoke Walnut Dining Trivet" 
+                                            data-price="90.00" 
+                                            data-image="assets/cat_custom.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Walnut Wood • Table Protection</span>
+                                <h4 class="product-title">Bespoke Walnut Dining Trivet</h4>
+                                <span class="product-price">$90.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="cust-2" data-name="Bespoke Walnut Dining Trivet" data-price="90.00" data-image="assets/cat_custom.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="product-badge product-badge-artisan">Bespoke</span>
+                            <div class="product-card-image">
+                                <img src="assets/cat_custom.png" alt="Cherry Keepsake Box" loading="lazy" style="filter: brightness(0.9) contrast(1.2);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="cust-3"
+                                            data-name="Hand-tailored Cherry Keepsake Box" 
+                                            data-price="120.00" 
+                                            data-image="assets/cat_custom.png" 
+                                            data-wood="Aged Cherry Wood"
+                                            data-artisan="Bespoke Design Team"
+                                            data-description="A clean cherry memory box crafted with custom divider slots, custom monogram plaque, and hidden solid brass hinges."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="cust-3" 
+                                            data-name="Hand-tailored Cherry Keepsake Box" 
+                                            data-price="120.00" 
+                                            data-image="assets/cat_custom.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Cherry Wood • Memory Chest</span>
+                                <h4 class="product-title">Hand-tailored Cherry Keepsake Box</h4>
+                                <span class="product-price">$120.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="cust-3" data-name="Hand-tailored Cherry Keepsake Box" data-price="120.00" data-image="assets/cat_custom.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card-image">
+                                <img src="assets/cat_custom.png" alt="Heritage Shield" loading="lazy" style="filter: saturate(1.3) hue-rotate(10deg);">
+                                <div class="product-actions-overlay">
+                                    <button class="product-action-btn quick-view-trigger" 
+                                            data-id="cust-4"
+                                            data-name="Made-to-Order Heritage Shield" 
+                                            data-price="210.00" 
+                                            data-image="assets/cat_custom.png" 
+                                            data-wood="Aged Pine & Cedar"
+                                            data-artisan="Bespoke Design Team"
+                                            data-description="Featuring family heraldry crests or unique motifs hand-etched onto thick pine boards, custom finished with natural oils."
+                                            aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="product-action-btn add-to-cart-btn" 
+                                            data-id="cust-4" 
+                                            data-name="Made-to-Order Heritage Shield" 
+                                            data-price="210.00" 
+                                            data-image="assets/cat_custom.png"><i class="fa-solid fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-meta">Pine & Cedar • Family Crest</span>
+                                <h4 class="product-title">Made-to-Order Heritage Shield</h4>
+                                <span class="product-price">$210.00</span>
+                                <button class="product-mobile-add-btn add-to-cart-btn" data-id="cust-4" data-name="Made-to-Order Heritage Shield" data-price="210.00" data-image="assets/cat_custom.png"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       6. FOOTER
+       ========================================== -->
+    <footer class="footer-wrapper">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- About Col -->
+                <div class="footer-col footer-col-about">
+                    <h4 style="font-size: 1.4rem;">CVR Handicrafts</h4>
+                    <p style="margin-top: 15px;">Keeping the soul of heritage woodcarving alive. Creating spectacular handcrafted teak, rosewood, and mahogany masterpieces to anchor luxury homes.</p>
+                    <div class="footer-social-icons">
+                        <a href="https://facebook.com" class="social-icon-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" class="social-icon-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://pinterest.com" class="social-icon-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="https://youtube.com" class="social-icon-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Sitemap Col -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links-list" style="margin-top: 15px;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Shop Categories</a></li>
+                        <li><a href="shop.html">All Products</a></li>
+                        <li><a href="about.html">About Our Story</a></li>
+                        <li><a href="contact.html">Contact Concierge</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories Col -->
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul class="footer-links-list" style="margin-top: 15px;">
+                        <li><a href="shop.html#sculptures-section">Wooden Sculptures</a></li>
+                        <li><a href="shop.html#masks-section">Wooden Masks</a></li>
+                        <li><a href="shop.html#decor-section">Home Decor</a></li>
+                        <li><a href="shop.html#wallart-section">Wall Art Panels</a></li>
+                        <li><a href="shop.html#gifts-section">Luxury Gift Items</a></li>
+                        <li><a href="shop.html#custom-section">Bespoke Work</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Col -->
+                <div class="footer-col footer-col-newsletter">
+                    <h4>Newsletter</h4>
+                    <p style="margin-top: 15px;">Subscribe to receive previews of new artisan collections, wood care guides, and private showroom events.</p>
+                    <div class="form-status-message" id="newsletterFormStatus" style="padding: 6px; font-size: 0.8rem;"></div>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" placeholder="Your Email Address" aria-label="Newsletter email field" required>
+                        <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe to newsletter"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                    <span style="font-size: 0.75rem; opacity: 0.5;">No spam. Unsubscribe anytime.</span>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 CVR Handicrafts Private Limited. All Rights Reserved. Designed by Antigravity.</p>
+                <div class="payment-gateways" aria-label="Supported Secure Payments">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-stripe"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+       ACTIVE CART DRAWER (SLIDING PANEL)
+       ========================================== -->
+    <div class="cart-drawer-backdrop" id="cartDrawerBackdrop"></div>
+    <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Cart Drawer">
+        <div class="cart-drawer-header">
+            <h3>Shopping Bag</h3>
+            <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close Shopping Cart">&times;</button>
+        </div>
+        <div class="cart-items-container" id="cartItemsContainer">
+            <div class="cart-empty-message">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Your luxury shopping bag is currently empty.</p>
+                <a href="shop.html" class="btn btn-gold btn-sm">Explore Shop</a>
+            </div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-line">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-line">
+                <span>Safe shipping packaging:</span>
+                <span class="gold-text">Complimentary</span>
+            </div>
+            <div class="cart-summary-line cart-summary-line-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary cart-checkout-btn" id="checkoutBtn">Proceed To Checkout</button>
+        </div>
+    </div>
+
+    <!-- ==========================================
+       SEARCH OVERLAY MODAL
+       ========================================== -->
+    <div class="search-overlay-modal" id="searchOverlayModal" role="dialog" aria-modal="true" aria-label="Product Search Modal">
+        <button class="search-overlay-close" id="searchCloseBtn" aria-label="Close Search Overlay">&times;</button>
+        <div class="search-overlay-container">
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input-field" id="searchInputField" placeholder="Search the collections..." aria-label="Search field">
+                <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
+            </div>
+            <div>
+                <span class="search-results-label">Matching Products</span>
+                <div class="search-results-grid" id="searchResultsGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+       QUICK VIEW MODAL
+       ========================================== -->
+    <div class="quickview-backdrop" id="quickViewBackdrop">
+        <div class="quickview-modal" role="dialog" aria-modal="true" aria-label="Product Quick View Dialog">
+            <button class="quickview-close-btn" id="quickViewCloseBtn" aria-label="Close Quick View dialog">&times;</button>
+            <div class="quickview-grid">
+                <div class="quickview-image-panel">
+                    <img src="assets/cat_sculptures.png" id="qvProductImage" alt="Product Quick View Preview">
+                </div>
+                <div class="quickview-info-panel">
+                    <span class="quickview-meta" id="qvProductWood">Premium Teakwood</span>
+                    <h3 class="quickview-title" id="qvProductTitle">Teakwood Elephant Statue</h3>
+                    <div class="quickview-price" id="qvProductPrice">$245.00</div>
+                    <p class="quickview-desc" id="qvProductDescription">An incredibly detailed sculpture of an elephant...</p>
+                    <div class="quickview-details-meta">
+                        <span><strong>Carver Artisan:</strong> <span id="qvProductArtisan">Master Devappa Acharya</span></span>
+                        <span><strong>Packaging:</strong> Custom Multi-layer Shockproof Box</span>
+                        <span><strong>Shipping Guarantee:</strong> 100% Transit Safe Insured</span>
+                    </div>
+                    <div class="quickview-add-action">
+                        <div class="quickview-qty-select">
+                            <button class="quickview-qty-btn" id="qvQtyDec" aria-label="Decrease quantity">-</button>
+                            <span class="quickview-qty-val" id="qvQtyVal">1</span>
+                            <button class="quickview-qty-btn" id="qvQtyInc" aria-label="Increase quantity">+</button>
+                        </div>
+                        <button class="btn btn-primary" id="qvAddToCartBtn">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Script -->
+    <script src="script.js"></script>
+</body>
+</html>
